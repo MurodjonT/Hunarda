@@ -11,7 +11,7 @@ def init_driver(request):
     s = serv("C:\\Program Files\\Drivers\\chromedriver_win32\\chromedriver.exe")
     web_driver = webdriver.Chrome(service=s)
     web_driver.maximize_window()
-    web_driver.get("http://dicore.uz:7777/")
+    web_driver.get("http://192.168.31.93:5173/login")
     web_driver.implicitly_wait(10)
     request.cls.driver = web_driver
     yield
