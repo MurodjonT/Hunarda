@@ -17,7 +17,7 @@ class HomePageScreen(Screen):
     success_login = (By.XPATH, "//*[text()=\"Login success\"]")
     """login_page locator END"""
 
-    """Staffs page locators"""
+    """home page locators"""
     add_course_btn = (By.XPATH,
                       "//*[@class = \"v-btn v-theme--light bg-success v-btn-"
                       "-density-default v-btn--size-default v-btn--variant-flat\"]")
@@ -39,7 +39,16 @@ class HomePageScreen(Screen):
     delete_course_btn = (By.XPATH, "//*[text() = \"Sog' bulasla   Hammasi 5da\"]/parent::tr/td[10]/button")
     confirm_delete = (By.XPATH, "//*[@class=\"swal2-confirm btn btn-success\"]")
 
-    """Staffs page locators"""
+    """Home page locators"""
+
+    """ Staffs page Locators """
+    Staff_btn = (By.XPATH, "//*[text() = \"Staffs\"]")
+    add_staff_btn = (By.XPATH, "//*[@class=\"v-btn v-theme--light bg-success v-btn--density-default v-btn--size-default v-btn--variant-flat mt-7 float-right\"]")
+    input_name_staff = (By.XPATH, "//*[@placeholder = \"Name\"]")
+    input_password_staff = (By.XPATH, "//*[@type=\"password\"]")
+    save_btn_staff = (By.XPATH, "//*[text() = \" Save \"]")
+
+    """ Staffs page Locators End """
 
     def check_open_home_page(self, login, password):
         time.sleep(2)
