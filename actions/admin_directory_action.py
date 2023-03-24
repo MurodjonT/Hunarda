@@ -7,6 +7,6 @@ class DirectoryPageAction(HomePageNavigation):
         self.home_page_navigation(login1, password1)
         return True
 
-    def open_news_page(self, name, file):
-        self.check_add_news(name, file)
+    def open_news_page(self, name, file, description):
+        self.check_add_news(name, file, description)
         return True
