@@ -58,7 +58,8 @@ class Screen:
         self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
 
     def clear_field(self, locator):
-        WebDriverWait(self.driver, 50).until(ec.visibility_of_element_located(locator)).clear()
+        element = WebDriverWait(self.driver, timeout=50).until(ec.visibility_of_element_located(locator))
+        element.clear()
 
     def click_by_param(self, locator, argument):
         element = WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located((locator[0], locator[1].format(argument))))
