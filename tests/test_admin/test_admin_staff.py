@@ -1,4 +1,4 @@
-from actions.admin_staffs_action import StaffPageAction
+from actions.admin_action.admin_staffs_action import StaffPageAction
 from base_test import TestBase
 
 
