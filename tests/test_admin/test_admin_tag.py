@@ -7,4 +7,4 @@ class TestTagPage(TestBase):
 
     def test_category_page(self):
         self.go_to_tag_page = TagPageAction(self.driver)
-        assert self.go_to_tag_page.open_tag_page(TestDatas.login_admin, TestDatas.password_admin)
+        assert self.go_to_tag_page.open_tag_page(TestDatas.login_admin, TestDatas.password_admin, "test_tag", "_edit")
