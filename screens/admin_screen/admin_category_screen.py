@@ -28,6 +28,7 @@ class CategoryPageScreen(Screen):
     def check_add_category(self, name_category, image_category):
         self.click(self.directory_btn)
         self.click(self.add_category)
+        time.sleep(1)
         self.enter_data(self.input_name_category, name_category)
         self.enter_data1(self.upload_image, image_category)
         self.click(self.save_btn_add_category)

@@ -9,7 +9,7 @@ class HomePageAction(HomePageNavigation):
         self.home_page_navigation("abdusamad", "teacheralex")
         assert self.check_add_course(file, name)
         assert self.check_edit_course(edit_name, edit_file)
-        self.check_search_course("Sog'")
+        self.check_search_course("Test")
         time.sleep(3)
         assert self.check_delete_course()
         return True

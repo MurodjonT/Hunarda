@@ -1,3 +1,3 @@
 class TestDatas:
     login_admin = "admin"
-    password_admin = "1234"
+    password_admin = "12345678"

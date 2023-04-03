@@ -1,6 +1,7 @@
 from navigations.home_page_navigation import HomePageNavigation
 
 
+
 class TagPageAction(HomePageNavigation):
 
     def open_tag_page(self, login1, password1, name_tag, edit_name):

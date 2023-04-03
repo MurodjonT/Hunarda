@@ -14,7 +14,7 @@ class StaffPageScreen(Screen):
     add_staff_btn = (By.XPATH, "//*[@class='v-btn v-theme--light bg-success v-btn--density-default v-btn--size-default v-btn--variant-flat mt-7 float-right']")
     input_name_staff = (By.XPATH, "//*[@placeholder = \"Name\"]")
     input_password_staff = (By.XPATH, "//*[@type=\"password\"]")
-    save_btn_staff = (By.XPATH, "//*[text() = \" Save \"]")
+    save_btn_staff = (By.XPATH, '//*[text() ="Save"]')
 
     edit_btn_staff = (By.XPATH, "//*[text() = \"Mirtesha\"]/parent::div/parent::td/parent::tr/td[4]/div/a")
     input_first_name = (By.XPATH, "//*[@placeholder=\"First Name\"]")
@@ -37,7 +37,8 @@ class StaffPageScreen(Screen):
         self.click(self.add_staff_btn)
         self.enter_data(self.input_name_staff, name)
         self.enter_data(self.input_password_staff, password)
-        self.click(self.save_btn_staff)
+        time.sleep(1)
+        self.click(self.save_add_user_btn)
 
     def check_edit_staff(self, first_name, surname, email, number):
         self.click(self.edit_btn_staff)
