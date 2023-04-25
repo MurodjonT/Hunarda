@@ -28,7 +28,7 @@ class NewsPageScreen(Screen):
 
     """Add news to course Locators"""
     test_news_btn = (By.XPATH, "//*[text() = 'test_news']")
-    add_course_news_btn = (By.XPATH, "//*[text() = ' Add ']")
+    add_course_news_btn = (By.XPATH, "//*[text() = 'Add']")
     course_dropdown = (By.XPATH, "//form/div/div/div/div/div[3]/div")
     in_course_dropdown = (By.XPATH, '//div[5]/div[2]/div')
     click_blank = (By.XPATH, '//*[@class="v-card-item"]')

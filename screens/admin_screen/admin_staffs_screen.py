@@ -51,7 +51,7 @@ class StaffPageScreen(Screen):
         self.click(self.in_role)
         self.click(self.save_add_user_btn)
         try:
-            if self.is_visible(self.success_user_edit):
+            if self.is_visible(self.success_path):
                 return True
         except Exception:
             return False

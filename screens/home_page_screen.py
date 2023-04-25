@@ -22,11 +22,10 @@ class HomePageScreen(Screen):
                       "//*[@class = \"v-btn v-theme--light bg-success v-btn-"
                       "-density-default v-btn--size-default v-btn--variant-flat\"]")
     input_name_field = (By.XPATH, "//*[text() = \"Name\"]/parent::div/div/div/div/div[3]/input")
-    input_category_dropdwon = (
-        By.XPATH, "/html/body/div[3]/div/div[2]/div/div[3]/form/div[2]/div[1]/div/div/div/div[3]/div")
-    in_input_category = (By.XPATH, "//div[2]/div/div/div[2]/div[2]/div")
-    input_tag_dropdown = (By.XPATH, "/html/body/div[3]/div/div[2]/div/div[3]/form/div[2]/div[2]/div/div/div")
-    in_tag = (By.XPATH, "//div/div[3]/div[2]/div")
+    input_category_dropdwon = (By.XPATH, "//input[@type='search' and @placeholder = \"Categories\"]")
+    in_input_category = (By.XPATH, "//li[contains(.,'IT')]")
+    input_tag_dropdown = (By.XPATH, "//input[@type='search' and @placeholder = \"Tags\"]")
+    in_tag = (By.XPATH, "//li[contains(.,'tag 12')]")
     upload_file = (By.XPATH, "//*[@type=\"file\"]")
     save_add_course = (By.XPATH, "//*[@class=\"v-btn v-btn--elevated v-theme--light bg-primary v-btn-"
                                  "-density-default v-btn--size-default v-btn--variant-elevated\"]")
@@ -34,9 +33,15 @@ class HomePageScreen(Screen):
 
     input_search_course = (By.XPATH, "//*[@placeholder=\"Search\"]")
 
-    edit_course_btn = (By.XPATH, "//*[text() = \"Test\"]/parent::tr/td[10]/div/button")
-    in_edit_tag = (By.XPATH, "//div[3]/div[2]/div/div/div/div[2]/div")
-    delete_course_btn = (By.XPATH, "//*[text() = \"Test   Hammasi 5da\"]/parent::tr/td[10]/button")
+    edit_course_btn = (By.XPATH, "//*[text() = \"IT\"]/parent::tr/td[10]/div/button")
+    x_icon_network = (By.XPATH, "/html/body/div[3]/div/div[2]/div/div[3]/form/div[2]/div[1]/div[1]/div/div[2]/button")
+
+    in_edit_tag = (By.XPATH, "//li[contains(.,'tag')]")
+    edit_category_dropdown = (By.XPATH, '/html/body/div[3]/div/div[2]/div/div[3]/form/div[2]/div[1]'
+                                        '/div[1]/div/div[2]/button')
+    x_icon_tag = (By.XPATH, "/html/body/div[3]/div/div[2]/div/div[3]/form/div[2]/div[2]/div[1]/div/div[1]/span/button")
+    in_edit_category = (By.XPATH, "//li[contains(.,'Backend')]")
+    delete_course_btn = (By.XPATH, "//*[text() = \"IT\"]/parent::tr/td[10]/button")
     confirm_delete = (By.XPATH, "//*[@class=\"swal2-confirm btn btn-success\"]")
 
     """Home page locators"""
@@ -85,10 +90,12 @@ class HomePageScreen(Screen):
 
     def check_edit_course(self, edit_name, edit_file):
         self.click(self.edit_course_btn)
+        self.click(self.x_icon_network)
         self.click(self.input_category_dropdwon)
         time.sleep(1)
         self.click(self.in_input_category)
         time.sleep(1)
+        self.click(self.x_icon_tag)
         self.click(self.input_tag_dropdown)
         time.sleep(1)
         self.click(self.in_edit_tag)
